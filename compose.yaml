@@ -1,0 +1,12 @@
+services:
+  techco:
+    build: .
+    ports:
+      - 8080:80
+    container_name: techco
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 1m
+      timeout: 3s
+      retries: 3
+      start_period: 5s
