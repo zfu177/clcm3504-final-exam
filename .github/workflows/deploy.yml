@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 env:
-  host_name: ec2-54-163-199-140.compute-1.amazonaws.com
+  host_name: ec2-54-205-79-207.compute-1.amazonaws.com
   user_name: ec2-user
 
 jobs:
@@ -30,7 +30,6 @@ jobs:
         source: techco.tar
         target: /home/ec2-user/images
         overwrite: true
-        rm: true
     - name: Start Container
       uses: appleboy/ssh-action@master
       with:
@@ -39,3 +38,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           docker load -i /home/ec2-user/images/techco.tar
+
