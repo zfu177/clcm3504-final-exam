@@ -28,7 +28,7 @@ jobs:
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: techco.tar
-        target: /home/ec2-user/techco.tar
+        target: /home/ec2-user
     - name: Start Container
       uses: appleboy/ssh-action@master
       with:
