@@ -30,6 +30,7 @@ jobs:
         source: techco.tar
         target: /home/ec2-user
         overwrite: true
+        rm: true
     - name: Start Container
       uses: appleboy/ssh-action@master
       with:
