@@ -28,7 +28,7 @@ jobs:
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: techco.tar
-        target: /home/ec2-user
+        target: /home/ec2-user/images
         overwrite: true
         rm: true
     - name: Start Container
@@ -38,4 +38,4 @@ jobs:
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          docker load -i /home/ec2-user/techco.tar
+          docker load -i /home/ec2-user/images/techco.tar
