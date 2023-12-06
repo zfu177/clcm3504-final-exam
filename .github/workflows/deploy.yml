@@ -29,6 +29,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: techco.tar
         target: /home/ec2-user
+        overwrite: true
     - name: Start Container
       uses: appleboy/ssh-action@master
       with:
