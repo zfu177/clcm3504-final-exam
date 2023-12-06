@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  padding-top: 0px;
+}
+
+.page-footer > row {
+  margin-bottom: 0px;
+}
+
+.pixel {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.brand-logo {
+  margin-left: 15px;
+}
+
+.portfolio h5 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.portfolio h6 {
+  margin-bottom: 15px;
+}
+
+.parallax-container {
+  min-height: 300px;
+  line-height: 0;
+  height: auto;
+}
+
+.parallax img {
+  opacity: 0.8 !important;
+}
+
+.partners h5 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_image_responsive.asp */
+.partners img {
+  width: 100%;
+  height: auto;
+}
+
+.services h5 {
+  text-align: center;
+}
+
+
+.card-title {
+  font-weight: 400 !important;
+  text-align: center;
+}
+
+.card-title i {
+  margin-right: 5px;
+}
+
+.aboutus i {
+  margin-right: 5px;
+}
+
+
+.aboutus h5 {
+  text-align: center;
+}
+
+.aboutus p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.contact h5 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact i {
+  margin-right: 5px;
+}
+
+.sidenav {
+  width: 150px;
+}

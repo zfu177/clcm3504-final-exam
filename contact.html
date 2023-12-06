@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- jquery and custom js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/custom.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact</title>
+    <link rel="icon" href="imgs/techco-icon.png">
+  </head>
+  <main>
+    <nav>
+      <div class="navbar-fixed light-blue">
+            <a href="index.html" class="brand-logo pixel">TechCo.</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+      </div>
+    </nav>
+    <ul class="sidenav light-blue" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div class="container contact">
+      
+      <div class="row">
+        <div class="col s12">
+          <h5>Contact Us</h5>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col s12 l5">
+          <h5><i class="material-icons">map</i>Address</h5>
+          <p>345 6 Ave SE, Calgary, AB, Canada T2G 4V1</p>
+          <h5><i class="material-icons">phone</i>Phone</h5>
+          <p>Canada: +14034101400</p>
+          <p>Overseas: 800123456789</p>
+          <h5><i class="material-icons">email</i>Email</h5>
+          <p><a href="mailto:contact@techco.com" target="_blank">contact@techco.com</a></p>
+          <p><a href="z.fu177@mybvc.ca" target="_blank">z.fu177@mybvc.ca</a></p>
+        </div>
+
+        <div class="col s12 l7">
+          <form>
+            <h5><i class="material-icons">message</i>Leave Us a Message</h5>
+            <div class="input-field col s12">
+              <input placeholder="Email" id="email" type="email" class="validate" required>
+              <label for="email">Your Email</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Subject" id="subject" type="text" class="validate" required>
+              <label for="subject">Subject</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="message" class="materialize-textarea" required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <div class="input-field col s12">
+              <a class="waves-effect btn light-blue right" onclick="alert('Success')">Submit</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.333954547938!2d-114.05857222358469!3d51.046921171712356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717ad00ad231a9%3A0x34c6c179aae00af8!2sBow%20Valley%20College%2C%20South%20Campus!5e0!3m2!1sen!2sca!4v1696564697151!5m2!1sen!2sca" width="650" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="page-footer light-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">TechCo.</h5>
+          <p class="grey-text text-lighten-4">Best services for our customers</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="https://bowvalleycollege.ca/">Bow Valley College</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="https://bowvalleycollege.ca/student-resources/technology-services">Technology Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2023 Copyright TechCo. Pty. Ltd.
+      <a class="grey-text text-lighten-4 right" href="#!">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+  
+</html>
