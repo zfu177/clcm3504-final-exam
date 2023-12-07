@@ -2,7 +2,7 @@ services:
   techco:
     image: IMAGE_NAME
     ports:
-      - 8080:80
+      - 80:80
     container_name: techco
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
