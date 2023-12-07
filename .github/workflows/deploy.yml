@@ -29,6 +29,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: deploy/*
         target: /home/ec2-user/deploy
+        strip_components: 1
         overwrite: true
     - name: Start Container
       uses: appleboy/ssh-action@master
