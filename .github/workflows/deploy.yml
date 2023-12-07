@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 env:
-  host_name: ec2-54-205-79-207.compute-1.amazonaws.com
+  host_name: ec2-54-221-97-19.compute-1.amazonaws.com
   user_name: ec2-user
 
 jobs:
@@ -20,15 +20,15 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t $image_tag
     - name: Save docker image as file
-      run: docker save $image_tag > techco.tar
-    - name: Copy docker image to ec2
+      run: docker save $image_tag > deploy/techco.tar
+    - name: Copy files to ec2
       uses: appleboy/scp-action@master
       with:
         host: ${{ env.host_name}}
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: techco.tar
-        target: /home/ec2-user/images
+        source: deploy/*
+        target: /home/ec2-user/deploy
         overwrite: true
     - name: Start Container
       uses: appleboy/ssh-action@master
@@ -37,5 +37,13 @@ jobs:
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          docker load -i /home/ec2-user/images/techco.tar
+          docker load -i /home/ec2-user/deploy/techco.tar
+          sed -i "s/IMAGE_NAME/${{ env.image_tag}}/g" /home/ec2-user/deploy/compose.yaml
+          if [ ! -f "/etc/systemd/system/techco.service" ]; then
+              sudo cp /home/ec2-user/deploy/techco.service /etc/systemd/system/
+              sudo systemctl enable techco
+              sudo systemctl start techco
+          else
+              sudo systemctl restart techco
+          fi
 
