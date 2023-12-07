@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 env:
-  host_name: ec2-34-204-107-130.compute-1.amazonaws.com
+  host_name: ec2-54-92-214-119.compute-1.amazonaws.com
   user_name: ec2-user
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
         host: ${{ env.host_name}}
         username: ${{ env.user_name}}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: deploy/*
+        source: "deploy/compose.yaml,deploy/techco.service,deploy/techco.tar"
         target: /home/ec2-user/deploy
         strip_components: 1
         overwrite: true
