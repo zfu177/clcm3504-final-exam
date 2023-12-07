@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 env:
-  host_name: ec2-54-221-97-19.compute-1.amazonaws.com
+  host_name: ec2-34-204-107-130.compute-1.amazonaws.com
   user_name: ec2-user
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           docker load -i /home/ec2-user/deploy/techco.tar
-          sed -i "s/IMAGE_NAME/${{ env.image_tag}}/g" /home/ec2-user/deploy/compose.yaml
+          sed -i "s/IMAGE_NAME/${{ env.image_tag }}/g" /home/ec2-user/deploy/compose.yaml
           if [ ! -f "/etc/systemd/system/techco.service" ]; then
               sudo cp /home/ec2-user/deploy/techco.service /etc/systemd/system/
               sudo systemctl enable techco
