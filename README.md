@@ -81,4 +81,7 @@ Five steps are defined in the "deploy" job.
    4. Delete the copied image file "*.tar"
 
 
-This application is managed by "systemd" and docker compose, which ensures that the application is automatically started when the OS reboot. In addition, the docker compose file defines health check using "curl" command to periodically check the health of the container and automatically restart.
+This application is managed by "systemd" and docker compose, which ensures that the application is automatically started when the OS reboot. In addition, the docker compose file defines health check using "curl" command to periodically check the health of the container and automatically restart. However, if the EC2 instance is restarted, the public DNS name will change, please keep the "host_name" variable up-to-date to avoid pipeline failure. Alternatively, assign and replace the value of "host_name" to the EIP of the EC2 instance.
+
+## Challenges
+No Challenges, this is a simple setup.
