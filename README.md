@@ -87,3 +87,6 @@ This application is managed by "systemd" and docker compose, which ensures that 
 
 ## Challenges
 No Challenges, this is a simple setup.
+
+## Test & Screenshot
+![Index](https://github.com/zfu177/clcm3504-final-exam/blob/main/screenshot.png?raw=true)
