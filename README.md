@@ -1,5 +1,7 @@
 # CLCM3504 Final Exam
+GitHub Repository: https://github.com/zfu177/clcm3504-final-exam
 ## Author: Zhongyi Fu
+This frontend application is solely developed by me for the group project CLCM3504, original GitHub repo: https://github.com/zfu177/techco-frontend-3504-g1
 
 ## How to Set Up This Project
 ### 1. Add SSH Private Key to the Repository Secrets
