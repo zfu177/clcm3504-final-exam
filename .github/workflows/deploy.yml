@@ -46,4 +46,6 @@ jobs:
           else
               sudo systemctl restart techco
           fi
+          # cleaup
+          rm /home/ec2-user/deploy/techco.tar
 
