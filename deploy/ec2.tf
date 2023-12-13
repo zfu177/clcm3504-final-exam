@@ -30,7 +30,8 @@ resource "aws_security_group" "allow_ssh_http" {
   }
 
   tags = {
-    Name          = "techco-web-server"
+    Name          = "clcm3504-final-zhongyi-fu"
+    Service       = "techco-web-server"
     Administrator = "z.fu177@mybvc.ca"
   }
 }
@@ -43,7 +44,8 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]
 
   tags = {
-    Name          = "techco-web-server"
+    Name          = "clcm3504-final-zhongyi-fu"
+    Service       = "techco-web-server"
     Administrator = "z.fu177@mybvc.ca"
   }
 }
